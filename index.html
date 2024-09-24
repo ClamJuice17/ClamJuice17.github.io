@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Perfumes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-dark text-secondary px-4 py-5 text-center" id = "StartDiv">
+        <div class="py-5">
+            <h1 class="display-5 fw-bold text-white">My Perfumes</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="fs-t mb-4">
+                    Enjoy my collection of Perfumes so far, each one has its own picture for visual representation. Click the name of one you like, to get more Information on it.
+                </p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <button id="openModal" type="button" class="btn btn-outline-warning btn-lg px-3 me-sm-3 fw-bold">Add Perfume</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalPerfume" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <h2 class="fw-bold mv-0 fs-2">Add a new Perfume</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-5 pt-0">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="pName" placeholder="Perfume Name">
+                        <label for="pName">Perfume Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="pInfo" placeholder="Perfume Info"></textarea>
+                        <label for="pInfo">Perfume Info</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="file" class="form-control" id="pImage" accept="image/*">
+                        <label for="pImage">Perfume Image</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="url" class="form-control" id="pLink" placeholder="Fragrantica Link">
+                        <label for="pLink">Fragrantica Link</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="pRating" placeholder="Perfume Rating">
+                        <label for="pRating">Perfume Rating</label>
+                    </div>
+                    <button id="addPerfume" class="btn btn-primary">Add Perfume</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="editModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <h2 class="fw-bold mv-0 fs-2">Edit Perfume</h2>
+                    <button type="button" id="closeEdit" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-5 pt-0">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="pNameEdit" placeholder="Edit perfume Name">
+                        <label for="pNameEdit">Edit perfume Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="pInfoEdit" placeholder="Edit perfume Info"></textarea>
+                        <label for="pInfoEdit">Edit perfume Info</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="file" class="form-control" id="pImageEdit" accept="image/*">
+                        <label for="pImageEdit">Edit perfume Image</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="url" class="form-control" id="pLinkEdit" placeholder="Edit Fragrantica Link">
+                        <label for="pNameEdit">Edit Fragrantica Link</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="pRatingEdit" placeholder="Perfume Rating">
+                        <label for="pRating">Edit Perfume Rating</label>
+                    </div>
+                    <button id="save" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
